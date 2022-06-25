@@ -2,11 +2,12 @@ import { Button, Group } from '@mantine/core'
 import React from 'react'
 import { Layout } from '../components/Layout'
 import { BrandGithub, ThreeDCubeSphere } from 'tabler-icons-react';
+import Link from 'next/link';
 
 const ButtonDemo = () => {
   return (
     <Layout title='Button'>
-      <Group position="center">
+      <Group direction="column" position="center">
         <Button 
         variant="outline" 
         color="red" radius="lg" 
@@ -19,6 +20,11 @@ const ButtonDemo = () => {
         rightIcon={<ThreeDCubeSphere/>}>
           ボタン
         </Button>
+        <Link href="/">
+          <Button mt="md">
+            Click
+          </Button>
+        </Link>
       </Group>
     </Layout>
   )
